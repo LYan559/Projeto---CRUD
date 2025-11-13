@@ -1,0 +1,200 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Fundo (Preto Escuro Twitch: #0e0e10) */
+body {
+    background: #0e0e10;
+    color: #e0eeef; /* Texto Cinza Claro */
+    padding-bottom: 50px; /* Espaço para o botão ADM */
+    min-height: 100vh;
+}
+
+/* --- Cabeçalho (Header) --- */
+header {
+    background-color: #18181b; /* Fundo Secundário Twitch */
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #9147FF; /* Linha Roxo Twitch */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.logo a {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 0;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav a:hover {
+    color: #9147FF;
+    border-bottom: 2px solid #9147FF;
+}
+
+/* --- Título Principal --- */
+.titulo-loja {
+    color: #ffffff;
+    padding: 40px 20px 15px;
+    margin: 0 auto 40px auto;
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-align: center;
+    max-width: 1200px;
+    border-bottom: 4px solid #9147FF; /* Linha Roxo Twitch */
+}
+
+/* --- Container de Produtos --- */
+.container-produtos {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* 4 colunas em telas grandes */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* --- Cartão de Produto --- */
+.produto {
+    background: #1f1f23; /* Fundo mais escuro para o cartão */
+    border: 1px solid #3d3d41;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
+}
+
+.produto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(145, 71, 255, 0.3); /* Sombra roxa no hover */
+}
+
+/* --- Imagem (Nova Tag <img>) --- */
+.imagem-produto {
+    width: 100%;
+    /* Altura automática para evitar distorção, se necessário fixe uma altura para o layout: */
+    /* height: 200px; object-fit: cover; */ 
+    height: auto; 
+    display: block;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #3d3d41;
+}
+
+/* --- Informações do Produto --- */
+.info p {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    padding: 0 5px;
+}
+
+.nome-produto {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px !important;
+}
+
+.preco {
+    color: #9147FF; /* Preço em Roxo Twitch */
+    font-size: 1.3rem;
+    font-weight: 900;
+    margin-top: 15px !important;
+}
+
+/* --- Botão de Compra --- */
+.botao-comprar {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    background: #9147FF; /* Roxo Twitch */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.botao-comprar:hover {
+    background: #772ce8; /* Roxo mais escuro no hover */
+    transform: translateY(-2px);
+}
+
+/* --- Botão ADM (Fixo) --- */
+#adm-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    background: #9147FF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1001;
+    margin-left: 0 !important; /* Sobrescreve a regra do nav */
+}
+
+#adm-button:hover {
+    background: #772ce8;
+    transform: scale(1.05);
+    color: #fff;
+    border-bottom: none;
+}
+
+/* Media Query para telas menores (Responsividade) */
+@media (max-width: 900px) {
+    .container-produtos {
+        /* 2 colunas em tablets */
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 10px;
+    }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav {
+        margin-top: 10px;
+    }
+    nav a {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 550px) {
+    .container-produtos {
+        /* 1 coluna em celulares */
+        grid-template-columns: 1fr;
+    }
+    .titulo-loja {
+        font-size: 2rem;
+    }
+}

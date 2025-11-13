@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Faça seu Login</h1>
+
+    <div class="login-container">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha">
+
+        <a href="#" id="btnEntrar">Entrar</a> 
+
+        <p>Não tem cadastro ainda? <a href="cadastro.html">Clique aqui!</a></p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Liga o botão de Entrar à função de login
+            // O link de 'Entrar' no HTML deve ter o ID "btnEntrar"
+            document.getElementById('btnEntrar').addEventListener('click', fazerLogin);
+        });
+        
+        function fazerLogin(event) {
+            // Previne que o link siga para o href="guitarra.html" automaticamente
+            event.preventDefault(); 
+            
+            const emailInput = document.getElementById('email').value;
+            const senhaInput = document.getElementById('senha').value;
+        
+            if (!emailInput || !senhaInput) {
+                alert('Por favor, preencha o email e a senha.');
+                return;
+            }
+        
+            // Busca o usuário pelo email no json-server (URL: http://localhost:3000/usuarios)
+            fetch(`http://localhost:3000/usuarios?email=${emailInput}`)
+                .then(response => response.json())
+                .then(usuarios => {
+                    if (usuarios.length === 0) {
+                        alert('Usuário não encontrado.');
+                        return;
+                    }
+        
+                    const usuario = usuarios[0];
+        
+                    // 2. Verifica a senha
+                    if (usuario.senha === senhaInput) {
+                        alert('Login bem-sucedido!');
+                        
+                        // === MECANISMO DE SEGURANÇA: LocalStorage ===
+                        // Cria um FLAG de acesso no navegador
+                        localStorage.setItem('usuarioLogado', 'true'); 
+        
+                        // Redireciona para a loja
+                        window.location.href = 'guitarra.html';
+                    } else {
+                        alert('Senha incorreta.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao tentar login:', error);
+                    alert('Erro de conexão. Verifique se o json-server está ativo na porta 3000.');
+                });
+        }
+    </script>
+
+</body>
+</html>

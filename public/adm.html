@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel ADM - CRUD Completo Twitch Style</title>
+    <link rel="stylesheet" href="adm.css">
+    </head>
+<body>
+
+    <h1 class="titu-principal">Página do Administrador</h1>
+
+    <section class="crud-section" id="section-read-delete">
+        <h2>Visualizar + Excluir Usuários </h2>
+        <p>Use a tabela para visualização e os botões "Excluir" para remover registros.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Nome:</td>
+                    <td>Sobrenome:</td>
+                    <td>CPF:</td>
+                    <td>Email:</td>
+                    <td>Senha:</td>
+                    <td>Rua:</td>
+                    <td>CEP:</td>
+                    <td>Cidade:</td>
+                    <td>Estado:</td>
+                    <td>Telefone:</td>
+                    <td>Ação</td>
+                </tr>
+            </thead>
+            <tbody id="tabelaCorpo">
+                </tbody>
+        </table>
+    </section>
+
+    <section class="crud-section" id="section-create">
+        <h2>Cadastrar Novo Usuário</h2>
+        <form id="formPost">
+            <label for="nomePost">Nome:</label>
+            <input type="text" id="nomePost">
+
+            <label for="sobrenomePost">Sobrenome:</label>
+            <input type="text" id="sobrenomePost">
+
+            <label for="cpfPost">CPF:</label>
+            <input type="text" id="cpfPost">
+
+            <label for="emailPost">Email:</label>
+            <input type="text" id="emailPost">
+
+            <label for="senhaPost">Senha:</label>
+            <input type="password" id="senhaPost">
+
+            <label for="ruaPost">Rua:</label>
+            <input type="text" id="ruaPost">
+
+            <label for="cepPost">CEP:</label>
+            <input type="text" id="cepPost">
+
+            <label for="cidadePost">Cidade:</label>
+            <input type="text" id="cidadePost">
+
+            <label for="estadoPost">Estado:</label>
+            <input type="text" id="estadoPost">
+
+            <label for="telefonePost">Telefone:</label>
+            <input type="text" id="telefonePost">
+
+            <button type="button" id="btnCadastrar">Cadastrar Usuário</button>
+        </form>
+    </section>
+    
+    <section class="crud-section" id="section-update">
+        <h2>Atualizar Dados de Usuário</h2>
+        <form id="formPut">
+            <p>1. Busque o usuário pelo CPF para carregar os dados. 2. Atualize os campos desejados e salve.</p>
+            
+            <label for="identificadorCPF">CPF (Para buscar o usuário):</label>
+            <input type="text" id="identificadorCPF">
+
+            <button type="button" id="btnBuscar">Buscar Dados</button>
+            <hr>
+
+            <label for="identificadorPut">ID (Não editável):</label>
+            <input type="text" id="identificadorPut" disabled>
+            
+            <label for="nomeAtualizar">Nome:</label>
+            <input type="text" id="nomeAtualizar">
+
+            <label for="sobrenomeAtualizar">Sobrenome:</label>
+            <input type="text" id="sobrenomeAtualizar">
+
+            <label for="emailAtualizar">Email:</label>
+            <input type="email" id="emailAtualizar">
+
+            <label for="senhaAtualizar">Senha:</label>
+            <input type="text" id="senhaAtualizar">
+
+            <label for="ruaAtualizar">Rua:</label>
+            <input type="text" id="ruaAtualizar">
+
+            <label for="cepAtualizar">CEP:</label>
+            <input type="text" id="cepAtualizar">
+
+            <label for="cidadeAtualizar">Cidade:</label>
+            <input type="text" id="cidadeAtualizar">
+
+            <label for="estadoAtualizar">Estado:</label>
+            <input type="text" id="estadoAtualizar">
+
+            <label for="telefoneAtualizar">Telefone:</label>
+            <input type="text" id="telefoneAtualizar">
+
+            <button type="button" id="btnAtualizar">Atualizar Dados</button>
+        </form>
+    </section>
+
+    <a href="guitarra.html" class="floating-link">Voltar para a Loja</a>
+
+    <script src="adm.js"></script>
+    
+</body>
+</html>

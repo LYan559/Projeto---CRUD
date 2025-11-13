@@ -1,0 +1,111 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Fundo geral (Twitch Dark: #0e0e10) */
+body {
+    background: #0e0e10;
+    color: #e0e1dd;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container principal (Formulário) */
+.container-cadastro {
+    background: #1f1f23; /* Fundo do cartão Twitch */
+    border: 1px solid #3d3d41;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    border-bottom: 3px solid #9147FF; /* Roxo Twitch */
+    padding-bottom: 10px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #9147FF; /* Roxo Twitch para destaque */
+    font-size: 14px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #3d3d41;
+    border-radius: 4px;
+    background: #18181b; /* Fundo de input Twitch */
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input:focus {
+    border: 2px solid #9147FF; /* Roxo Twitch no foco */
+    background: #0e0e10;
+    box-shadow: 0 0 10px rgba(145, 71, 255, 0.5);
+}
+
+/* Botão de Cadastrar */
+#btnCadastrar {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-top: 30px;
+    background: #9147FF; /* Roxo Twitch */
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+#btnCadastrar:hover {
+    background: #772ce8; /* Roxo mais escuro no hover */
+    transform: translateY(-2px);
+}
+
+/* Link Login */
+.link-login {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #a9c5df;
+}
+
+.link-login a {
+    color: #9147FF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.link-login a:hover {
+    color: #e0e1dd;
+    text-decoration: underline;
+}

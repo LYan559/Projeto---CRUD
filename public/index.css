@@ -1,0 +1,115 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Fundo geral (Tema Twitch) */
+body {
+    background: #0e0e10; /* Preto Twitch */
+    color: #ffffff;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Título */
+h1 {
+    /* COR: Roxo Twitch para destaque */
+    background: #9147FF; 
+    color: #ffffff;
+    padding: 20px 40px;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 12px;
+    /* Sombra Roxa */
+    box-shadow: 0 4px 20px rgba(145, 71, 255, 0.5); 
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Form container (Card do Login) */
+.login-container {
+    background: #1f1f23; /* Fundo do cartão Twitch */
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #9147FF; /* Roxo Twitch */
+    font-size: 14px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #3d3d41;
+    border-radius: 8px;
+    background: #18181b; /* Fundo de input escuro */
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input:focus {
+    border: 2px solid #9147FF; /* Roxo Twitch no foco */
+    background: #0e0e10;
+    box-shadow: 0 0 10px rgba(145, 71, 255, 0.5);
+}
+
+/* Botão de Entrar */
+#btnEntrar {
+    display: block;
+    text-align: center;
+    padding: 14px;
+    background: #9147FF; /* Roxo Twitch Sólido */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+#btnEntrar:hover {
+    background: #772ce8; /* Roxo mais escuro no hover */
+    transform: scale(1.04);
+}
+
+/* Link de cadastro */
+p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #e0e1dd;
+}
+
+p a {
+    color: #9147FF; /* Roxo Twitch */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+p a:hover {
+    color: #ffffff; /* Branco no hover */
+}

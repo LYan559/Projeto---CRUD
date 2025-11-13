@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitch Gear Shop - Guitarras</title>
+    <link rel="stylesheet" href="guitarra.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+   
+        <nav>
+            <a href="#" id="adm-button">ADM</a>
+        </nav>
+   
+
+    <h1 class="titulo-loja">Loja de Guitarras</h1>
+
+    <div class="container-produtos">
+        <div class="produto">
+            <img src="guitarraamarela.jfif" alt="" class="imagem-produto">
+            <div class="info">
+                <p class="nome-produto"><strong id="nome">Twitch Streamer Custom</strong></p>
+                <p><strong id="marca">Fender</strong></p>
+                <p><strong id="cor">Cor: Amarelo</strong></p>
+                <p class="preco"><strong id="preco">R$ 15.200,00</strong></p>
+                <button class="botao-comprar" onclick="comprar()">Comprar</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="guitarraroxa.webp" alt="Guitarra Modelo 2" class="imagem-produto">
+            <div class="info">
+                <p class="nome-produto"><strong id="nome2">Roxo Vintage Strat</strong></p>
+                <p><strong id="marca2">Gibson</strong></p>
+                <p><strong id="cor2">Cor: Roxo Brilhante</strong></p>
+                <p class="preco"><strong id="preco2">R$ 12.899,00</strong></p>
+                <button class="botao-comprar" onclick="comprar()">Comprar</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="guitarrapreta.webp" alt="Guitarra Modelo 3" class="imagem-produto">
+            <div class="info">
+                <p class="nome-produto"><strong id="nome3">Modelo Synthwave</strong></p>
+                <p><strong id="marca3">Ibanez</strong></p>
+                <p><strong id="cor3">Cor: Preto Fosco</strong></p>
+                <p class="preco"><strong id="preco3">R$ 9.150,00</strong></p>
+                <button class="botao-comprar" onclick="comprar()">Comprar</button>
+            </div>
+        </div>
+        
+        <div class="produto">
+            <img src="guitarralaranja.webp" alt="Guitarra Modelo 4" class="imagem-produto">
+            <div class="info">
+                <p class="nome-produto"><strong id="nome4">Classic Sunburst</strong></p>
+                <p><strong id="marca4">Epiphone</strong></p>
+                <p><strong id="cor4">Cor: Amarelo/Laranja</strong></p>
+                <p class="preco"><strong id="preco4">R$ 4.700,00</strong></p>
+                <button class="botao-comprar" onclick="comprar()">Comprar</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="guitarramarromepreta.webp" alt="Guitarra Modelo 5" class="imagem-produto">
+            <div class="info">
+                <p class="nome-produto"><strong id="nome5">Phantom Black</strong></p>
+                <p><strong id="marca5">Schecter</strong></p>
+                <p><strong id="cor5">Cor: Preto/Marrom</strong></p>
+                <p class="preco"><strong id="preco5">R$ 7.990,00</strong></p>
+                <button class="botao-comprar" onclick="comprar()">Comprar</button>
+            </div>
+        </div>
+        
+        <div class="produto">
+            <img src="guitarraazul.webp" alt="Guitarra Modelo 6" class="imagem-produto">
+            <div class="info">
+                <p class="nome-produto"><strong id="nome6">Blue Lagoon</strong></p>
+                <p><strong id="marca6">Jackson</strong></p>
+                <p><strong id="cor6">Cor: Azul Claro</strong></p>
+                <p class="preco"><strong id="preco6">R$ 6.350,00</strong></p>
+                <button class="botao-comprar" onclick="comprar()">Comprar</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="guitarraveremelha.jpg" alt="Guitarra Modelo 7" class="imagem-produto">
+            <div class="info">
+                <p class="nome-produto"><strong id="nome7">Acoustic Pro V2</strong></p>
+                <p><strong id="marca7">Taylor</strong></p>
+                <p><strong id="cor7">Cor: Madeira Natural</strong></p>
+                <p class="preco"><strong id="preco7">R$ 8.500,00</strong></p>
+                <button class="botao-comprar" onclick="comprar()">Comprar</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="guitarravermelha2.jpg" alt="Guitarra Modelo 8" class="imagem-produto">
+            <div class="info">
+                <p class="nome-produto"><strong id="nome8">Metal Shredder</strong></p>
+                <p><strong id="marca8">ESP</strong></p>
+                <p><strong id="cor8">Cor: Vermelha</strong></p>
+                <p class="preco"><strong id="preco8">R$ 10.999,00</strong></p>
+                <button class="botao-comprar" onclick="comprar()">Comprar</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // Checa se o LocalStorage tem a chave 'usuarioLogado' = 'true'
+        if (localStorage.getItem('usuarioLogado') !== 'true') {
+            alert('Acesso negado. Por favor, faça login.');
+            // Redireciona imediatamente para o login
+            window.location.href = 'index.html'; 
+        }
+    </script>
+
+
+
+
+
+
+
+    <script src="guitarra.js"></script>
+</body>
+</html>

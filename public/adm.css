@@ -1,0 +1,202 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Fundo geral (Preto Escuro Twitch: #0e0e10) */
+body {
+    background: #0e0e10; 
+    color: #e0e1dd;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Título Principal */
+.titu-principal {
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+    margin: 0 auto 50px auto;
+    max-width: 1200px;
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    /* Roxo Twitch */
+    border-bottom: 4px solid #9147FF; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Seções CRUD (Containers de Conteúdo) */
+.crud-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    /* Fundo Secundário Twitch */
+    background: #18181b; 
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.8);
+    border: 1px solid #3d3d41; /* Borda sutil */
+}
+
+.crud-section h2 {
+    color: #9147FF; /* Título de seção roxo */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3d3d41;
+    padding-bottom: 10px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.crud-section p {
+    color: #a9a9b3;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Estilo dos Formulários (POST, PUT) */
+form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #e0e1dd;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    /* Fundo dos campos de input da Twitch */
+    background: #1f1f23;
+    border: 1px solid #3d3d41;
+    border-radius: 4px;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border: 1px solid #9147FF; 
+    box-shadow: 0 0 8px rgba(145, 71, 255, 0.6); 
+}
+
+input[disabled] {
+    background: #2c2c31; 
+    color: #a9a9b3;
+    cursor: not-allowed;
+}
+
+/* Estilo dos Botões - Padrão (Cadastrar, Atualizar, Buscar) */
+button {
+    display: block; 
+    width: 100%;
+    padding: 14px;
+    margin-top: 25px;
+    background: #9147FF; 
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: #772ce8; 
+    transform: none; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do Botão de Excluir na Tabela (Vermelho de Ação Perigosa) */
+#tabelaCorpo button {
+    display: inline;
+    width: auto;
+    background: #fa3333; /* Vermelho de perigo */
+    font-size: 13px;
+    padding: 8px 12px;
+    margin: 0;
+}
+
+#tabelaCorpo button:hover {
+    background: #cc2929;
+    box-shadow: none;
+}
+
+/* Estilo da Tabela (GET/DELETE) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1f1f23; 
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+}
+
+thead {
+    background: #9147FF; 
+    color: #fff;
+}
+
+thead td {
+    font-weight: bold;
+    padding: 15px 10px;
+    text-align: center;
+    border-bottom: 3px solid #772ce8;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+tbody td {
+    padding: 12px 10px;
+    text-align: center;
+    border-bottom: 1px solid #3d3d41;
+    font-size: 13px;
+    color: #e0e1dd;
+    word-break: break-all; 
+}
+
+tbody tr:nth-child(even) { background: #18181b; }
+tbody tr:hover { background: #2c2c31; }
+
+/* Separador para o formulário PUT */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(145, 71, 255, 0), rgba(145, 71, 255, 0.75), rgba(145, 71, 255, 0));
+    margin: 30px 0;
+}
+
+/* Link Voltar (Flutuante) */
+.floating-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 14px 25px;
+    background: #9147FF; 
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.floating-link:hover {
+    background: #772ce8;
+    transform: scale(1.08);
+}
